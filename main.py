@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 
 # load the data
 vdf = pd.read_excel("table04a.xlsx")
-usa_map = gpd.read_file("cb_2018_us_state_20m/cb_2018_us_state_20m.shp")
+usa_map = gpd.read_file("map/cb_2018_us_state_20m.shp")
 
 # clean the data
 vdf.loc[:, "state"] = vdf.state.str.upper()
@@ -31,4 +31,5 @@ fig.update_layout(
 )
 
 fig.show()
+# fig.write_html("vep_turnout.html")
 # fig.write_image("vep_by_state.png")
